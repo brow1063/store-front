@@ -20,6 +20,9 @@ jobs:
           submodules: true
           lfs: false
       - name: Build And Deploy
+        env: 
+          VUE_APP_ORDER_SERVICE_URL: https://order-service.fake.net/
+          VUE_APP_PRODUCT_SERVICE_URL: https://product-service.fake.net/
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
